@@ -1,0 +1,695 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Landing Page Styles */
+#landing-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(0.30); 
+}
+
+.landing-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(175, 189, 200);
+    padding: 40px; /* Fixed padding value */
+    border-radius: 12px;
+    text-align: center;
+    z-index: 2;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+}
+.landing-content h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.landing-content p {
+    margin-bottom: 20px;
+}
+
+/* Enter Site Button */
+#enter-site {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #154047;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+#enter-site:hover {
+    background-color: #2a6666;
+}
+
+/* Main Page Styles */
+#main-page {
+    background: linear-gradient(to bottom, #0b2a30, #041215);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#main-page {
+    display: none; /* Initially hidden */
+    background-image: url('back.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    min-height: 100vh; /* Ensures the section covers the full viewport height */
+    filter:brightness(65%);
+}
+
+/* Add other styles for header and sections here */
+
+/* Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Darker color when scrolled */
+header.scrolled {
+    background-color: #0e0e0e; /* Slightly darker shade */
+}
+/* Hide header by default for the landing page */
+header.hidden-header {
+    display: none;
+}
+button#logo-button {
+    font-family: 'Oldenburg', sans-serif;
+    font-size: 40px;
+    color: #3A8888;
+    background-color: #3a888800;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+button#logo-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px #3A8888;
+}
+/* New header section styles */
+.new-header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Semi-transparent background */
+    color: white;
+    padding: 10px 0;
+
+}
+
+.new-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Header container styles */
+#main-header {
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent header background */
+    padding: 20px;
+    position: relative;
+    margin-top: -80px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack the new header and existing content */
+    align-items: center;
+}
+
+/* Existing Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -10px;
+}
+
+/* Tagline Styles */
+.tagline {
+    font-family:sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* Navigation Styles */
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0baea0;
+}
+
+
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+    color: white;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 40px; /* Increased gap between the cards */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 70px; /* Moves the whole row of cards to the right */
+    width: 100%; /* Ensures container spans the full width */
+}
+
+.card {
+    background: #154047;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 40px; /* Additional margin between cards */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.card h3 {
+    max-width: 250px;  /* Limit the width of the heading */
+    margin: 0 auto;    /* Center align the heading */
+    text-align: center; /* Optional: Center align the heading text */
+}
+
+.card p {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #041215;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .landing-content {
+        width: 90%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section {
+        padding: 80px 40px;
+    }
+    .section h2 {
+        font-size: 36px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+
+/* Default styles for header and navigation */
+#main-header {
+    display: none; /* Hide the header initially */
+    right: 0;
+    left: 0;
+    width: 100%; /* Make sure header stretches across the full width */
+    background-color: #040d0f; /* Dark color for the header */
+    color: white;
+    padding: 0px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+header {
+    width: 100%; /* Ensures the header takes up the full width of the screen */
+    padding: 0px 0px; /* Adjust padding for top, bottom, left, and right */
+    box-sizing: border-box; /* Makes sure padding doesn't increase the size of the element */
+}
+
+#nav-bar {
+    display: flex;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: auto;
+    background-color: #222;
+    justify-content: flex-end; /* Align the items to the right */
+    padding: 10px;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Controls the gap between items */
+}
+
+#nav-bar ul li {
+    margin-right: 20px;
+}
+
+#nav-bar ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+#nav-bar ul li a:hover {
+    color: #0baea0;
+}
+
+/* Landing Page Styles */
+#landing-page {
+    position: relative;
+}
+
+.landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.landing-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.landing-content button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #0baea0;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Other Sections */
+.section {
+    padding: 50px 20px;
+}
+/* Above Header Navigation Bar */
+.above-header-nav {
+    width: 100%;
+    background-color: #444;
+    padding: 10px 20px;
+    text-align: right; /* Aligns navigation links to the right */
+    right: 0;
+}
+
+.above-header-nav ul {
+    list-style-type: none;
+}
+
+.above-header-nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.above-header-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Main Header Styling */
+header {
+    display: flex;
+    justify-content:space-between; /* Centers the logo and tagline */
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    width: 100%;
+}
+
+header .header-content {
+    text-align: center;
+}
+/* Awareness Section */
+#awareness {
+    padding: 40px 0;
+}
+
+/* Flexbox layout for video and text content */
+.awareness-content {
+    display: flex;
+    align-items: center;  /* Vertically center the content */
+    gap: 20px; /* Space between the video and text box */
+}
+
+/* Video container styling */
+.awareness-video iframe {
+    width: 100%;  /* Make the video take up the full width of its container */
+    max-width: 560px;  /* Limit the maximum width */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners to the video */
+}
+
+/* Textbox container styling */
+.awareness-textbox {
+    width: 50%; /* Set the width of the content box */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 8px; /* Optional: Add rounded corners to the box */
+}
+
+/* Textbox styling */
+.awareness-textbox h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.awareness-textbox p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+#awareness .section-content {
+    display: flex;
+    justify-content: space-between; /* Keeps space between video and content */
+    flex-wrap: wrap; /* Makes sure the layout is responsive */
+    gap: 20px; /* Space between video and content */
+}
+
+.video-and-content {
+    display: flex;
+    align-items: flex-start; /* Ensures both video and content align to the top */
+    width: 100%;
+}
+
+.video-container {
+    flex: 1; /* Takes up remaining space */
+    max-width: 60%; /* Limit the width of the video */
+    margin-right: 20px; /* Space between video and content */
+}
+
+.content-box {
+    flex: 1; /* Takes up remaining space */
+    max-width: 45%; /* Limit the width of the content box */
+    font-family: Arial, sans-serif;
+    margin-right: 30px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.card p {
+    color: white; /* Change paragraph text color to white */
+}
+.cards-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the cards are spaced evenly */
+    gap: 10px; /* Adjust the space between the cards */
+    width: 80%; /* Make sure the container spans the full width */
+}
+#how-deepfakes-affect-us {
+    color: white;
+}
+#detection-techniques
+{color: white;}
+
+/* Card styles */
+.card {
+    background-color: #3a8888;
+    padding: 15px;
+    width: 23%; /* Adjust width for the card */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.card h3 {
+    font-size: 16px; /* Title font size */
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Button inside the card */
+.card-button {
+    background-color: #154047; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding around text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.card-button:hover {
+    background-color: #2c6767; /* Darker blue on hover */
+}
+
+/* Optional: Add some margin at the bottom of each card */
+.card {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Smooth scrolling when clicking the button */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Responsiveness */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stacks cards vertically on smaller screens */
+        align-items: center; /* Centers cards */
+    }
+
+    .card {
+        width: 80%; /* Adjust card width for smaller screens */
+        margin-bottom: 15px; /* Adds space between stacked cards */
+    }
+}
+.story-image-container {
+    width: 100vw; /* Full screen width */
+    height: 50vh; /* Half screen height */
+    overflow: hidden; /* Ensures no overflow of the image */
+  }
+  
+  .story-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    display: block;
+  }
+  .news-photo-container {
+    display: flex;
+    gap: 0; /* Removes any gap between images */
+    margin-top: 20px;
+}
+
+.news-photo {
+    width: 50%; /* Each image takes up half the container width */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#stories {
+    background-color: white;
+    padding: 40px 20px;
+}
+
+.story-image {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if the height is defined */
+    margin-bottom: 30px; /* Space between image and stories */
+}
+
+.story-image-img {
+    width: 100%; /* Make the image responsive */
+    max-width: 1000px; /* Adjust the max-width for your design */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow around the image */
+}
+
+.stories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between each box */
+    justify-content: center; /* Center the story boxes horizontally */
+}
+
+.story-box {
+    background-color: #0d2d4d00;
+    padding: 20px;
+    width: 200px; /* Fixed width for the boxes */
+    height: 150px; /* Fixed height for the boxes */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.story-box h3 {
+    font-size: 16px;
+    color: #070707;
+}
+
+.story-box:hover {
+    transform: translateY(-10px); /* Small hover effect */
+}
+
+#take-action {
+    padding: 20px;
+    background-color: white;
+    text-align: center; /* Aligns content to the center */
+}
+
+#take-action .section-content {
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the content */
+}
+
+#take-action h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+#take-action p {
+    font-size: 16px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+#take-action a {
+    display: inline-block; /* Ensures the link behaves like a block element */
+}
+
+#take-action .action-image {
+    max-width: 100%; /* Ensures the image is responsive and doesn't overflow */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+#take-action .action-image:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovering */
+}
+/* Container for news boxes */
+.news-boxes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* News Box Styling */
+.news-box-link {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.news-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%; /* Adjust width to fit two boxes side by side */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* News Headline */
+.news-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* News Description */
+.news-box p {
+    font-size: 14px;
+    color: #555;
+}
